@@ -1,0 +1,12 @@
+version: '3'
+services: 
+  app:
+    build: .
+    environment: 
+      VIRTUAL_PORT: 8080
+      VIRTUAL_HOST: sevens-api.docker-dev01.local
+
+networks: 
+  default:
+    external: 
+      name: dev-network
