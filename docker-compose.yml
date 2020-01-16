@@ -1,0 +1,12 @@
+version: '3'
+services: 
+  app:
+    build: .
+    environment: 
+      VIRTUAL_PORT: 8080
+      VIRTUAL_HOST: https://sevens-api.coresoft-net.com/
+
+networks: 
+  default:
+    external: 
+      name: dev-network
